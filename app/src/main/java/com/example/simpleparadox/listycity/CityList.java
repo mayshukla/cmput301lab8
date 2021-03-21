@@ -59,6 +59,12 @@ public class CityList {
      *      Return true if a city with a matching province exists.
      */
     public boolean hasProvince(String province) {
+        for (City c : cities) {
+            if (c.getProvinceName().equals(province)) {
+                return true;
+            }
+        }
+
         return false;
     }
 
