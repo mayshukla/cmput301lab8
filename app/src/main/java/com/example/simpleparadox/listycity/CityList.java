@@ -52,6 +52,23 @@ public class CityList {
     }
 
     /**
+     * This method checks to see if there is at least one city in the list with the given province.
+     * @param province
+     *      Name of province to check
+     * @return
+     *      Return true if a city with a matching province exists.
+     */
+    public boolean hasProvince(String province) {
+        for (City c : cities) {
+            if (c.getProvinceName().equals(province)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Delete the city from the list if it is there
      * @param city
      *      Candidate city to delete
